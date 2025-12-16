@@ -20,13 +20,18 @@ How to Run:
 
 python code/build_minimal_csv.py
 python code/run.py
+python code/run_extension.py
 
 Outputs:
 
-data/minimal.csv – Clean dataset
+data/minimal.csv – Clean dataset used for baseline replication
 output/results.txt – Contains regression results for:
 ΔFTE ~ NJ
 ΔFTE ~ GAP
+data/extension.csv - Dataset used for the extension analysis
+output/results_extension.txt – Contains regression results for:
+Symmetric percent change in FTE ~ NJ
+Symmetric percent change in FTE ~ GAP
 
 Key Results:
 
@@ -36,6 +41,20 @@ Model: ΔFTE ~ GAP Coefficient: +16.36 p-value: 0.006 Interpretation: Firm
 
 These results support Card & Krueger’s central conclusion:
 “The 1992 New Jersey minimum wage increase did not reduce employment — and may have increased it slightly.”
+
+Extension Description: 
+The extension evaluates robustness by replacing the level change in employment with the symmetric percent change in full-time equivalent employment:
+pchg_fte = 2(FTE2 − FTE1) / (FTE2 + FTE1)
+This alternative outcome measure accounts for differences in restaurant size and focuses on proportional employment adjustments. The extension uses the same differences-in-differences framework and treatment definitions as the baseline analysis.
+
+Extension Results
+Extension Model: pchg_fte ~ NJ
+The estimated coefficient is positive but not statistically significant, indicating no evidence of negative employment effects when employment changes are measured proportionally.
+
+Extension Model: pchg_fte ~ GAP
+The estimated coefficient is also positive but not statistically significant, suggesting that larger minimum wage increases are not associated with employment declines under the alternative outcome definition.
+
+Overall, the extension reinforces the baseline conclusion and demonstrates robustness to alternative modeling choices.
 
 Replication Notes:
 
