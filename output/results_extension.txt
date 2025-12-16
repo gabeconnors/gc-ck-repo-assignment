@@ -1,0 +1,58 @@
+EXTENSION: Change in Headcount Employment (DHC)
+
+Regression 1: DHC ~ NJ (HC1)
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:               pchg_fte   R-squared:                       0.004
+Model:                            OLS   Adj. R-squared:                  0.001
+Method:                 Least Squares   F-statistic:                     1.558
+Date:                Sun, 14 Dec 2025   Prob (F-statistic):              0.213
+Time:                        23:11:23   Log-Likelihood:                -222.14
+No. Observations:                 384   AIC:                             448.3
+Df Residuals:                     382   BIC:                             456.2
+Df Model:                           1                                         
+Covariance Type:                  HC1                                         
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+const         -0.0699      0.050     -1.406      0.160      -0.167       0.028
+NJ             0.0692      0.055      1.248      0.212      -0.039       0.178
+==============================================================================
+Omnibus:                      133.071   Durbin-Watson:                   2.164
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              615.281
+Skew:                          -1.428   Prob(JB):                    2.47e-134
+Kurtosis:                       8.505   Cond. No.                         4.32
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC1)
+
+
+Regression 2: DHC ~ GAP (HC1)
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:               pchg_fte   R-squared:                       0.003
+Model:                            OLS   Adj. R-squared:                  0.001
+Method:                 Least Squares   F-statistic:                     1.067
+Date:                Sun, 14 Dec 2025   Prob (F-statistic):              0.302
+Time:                        23:11:23   Log-Likelihood:                -211.75
+No. Observations:                 368   AIC:                             427.5
+Df Residuals:                     366   BIC:                             435.3
+Df Model:                           1                                         
+Covariance Type:                  HC1                                         
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+const         -0.0507      0.033     -1.550      0.121      -0.115       0.013
+GAP            0.3287      0.318      1.033      0.302      -0.295       0.952
+==============================================================================
+Omnibus:                      135.356   Durbin-Watson:                   2.176
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              663.492
+Skew:                          -1.497   Prob(JB):                    8.41e-145
+Kurtosis:                       8.857   Cond. No.                         13.2
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC1)
